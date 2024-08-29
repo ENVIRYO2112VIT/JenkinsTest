@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Development') {
+            steps {
+                echo 'Hello World - Development'
+                sh '''git clone https://github.com/ENVIRYO2112VIT/JenkinsTest.git'''
+                // sh 'cd JenkinsTest'
+                // sh ''
+            }
+        }
+        stage('QA'){
+            steps {
+                echo 'Hello World - QA'
+            }
+        }
+        stage('UI/UX'){
+            steps {
+                echo 'Hello World - UI/UX'
+            }
+        }
+    }
+}
